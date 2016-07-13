@@ -54,6 +54,7 @@ public class Replacer extends javax.swing.JFrame {
         imagenCC = new javax.swing.JLabel();
         licencia = new javax.swing.JLabel();
         version = new javax.swing.JLabel();
+        barraGrupo = new javax.swing.ButtonGroup();
         primerCampo = new javax.swing.JLabel();
         segundoCampo = new javax.swing.JLabel();
         tercerCampo = new javax.swing.JLabel();
@@ -95,12 +96,32 @@ public class Replacer extends javax.swing.JFrame {
         creacionTotal = new javax.swing.JLabel();
         etiquetaVacia = new javax.swing.JLabel();
         borrarTodo = new javax.swing.JToggleButton();
+        barra = new javax.swing.JToolBar();
+        nuevo = new javax.swing.JButton();
+        cargarBarra = new javax.swing.JButton();
+        campoUno = new javax.swing.JButton();
+        campoDos = new javax.swing.JButton();
+        campoTres = new javax.swing.JButton();
+        campoCuatro = new javax.swing.JButton();
+        campoCinco = new javax.swing.JButton();
+        campoSeis = new javax.swing.JButton();
+        campoSiete = new javax.swing.JButton();
+        campoOcho = new javax.swing.JButton();
+        campoNueve = new javax.swing.JButton();
+        campoDiez = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         Menu = new javax.swing.JMenuBar();
         archivo = new javax.swing.JMenu();
+        nuevoMenu = new javax.swing.JMenuItem();
         cargar = new javax.swing.JMenuItem();
         separadorMenu = new javax.swing.JPopupMenu.Separator();
         salir = new javax.swing.JMenuItem();
         acercaDe = new javax.swing.JMenu();
+        contenido = new javax.swing.JMenuItem();
+        separadorMenu2 = new javax.swing.JPopupMenu.Separator();
+        acercaDeMenu = new javax.swing.JMenuItem();
 
         selectorFichero.setBackground(new java.awt.Color(255, 255, 255));
         selectorFichero.setCurrentDirectory(new java.io.File("C:\\"));
@@ -111,6 +132,7 @@ public class Replacer extends javax.swing.JFrame {
             selectorFichero.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
 
             acercaDeReplacer.setIconImage(getIconImage());
+            acercaDeReplacer.setResizable(false);
             acercaDeReplacer.setSize(new java.awt.Dimension(220, 240));
 
             iconoApp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -118,13 +140,16 @@ public class Replacer extends javax.swing.JFrame {
 
             replacer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/replacerblanco.png"))); // NOI18N
 
+            creador.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
             creador.setText("Aplicación creada por Koutei_Cheke.");
 
             imagenCC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/by-nc.eu_petit.png"))); // NOI18N
 
+            licencia.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
             licencia.setText("Bajo licencia Creative Commons.");
 
-            version.setText("Versión v0.01a");
+            version.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+            version.setText("Versión v0.02a");
 
             setLocationRelativeTo(null);
 
@@ -136,7 +161,15 @@ public class Replacer extends javax.swing.JFrame {
                     .addContainerGap()
                     .addGroup(acercaDeReplacerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(acercaDeReplacerLayout.createSequentialGroup()
-                            .addGap(10, 10, 10)
+                            .addComponent(replacer)
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(acercaDeReplacerLayout.createSequentialGroup()
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addComponent(iconoApp)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(imagenCC)
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(acercaDeReplacerLayout.createSequentialGroup()
                             .addGroup(acercaDeReplacerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(acercaDeReplacerLayout.createSequentialGroup()
                                     .addGap(13, 13, 13)
@@ -144,20 +177,8 @@ public class Replacer extends javax.swing.JFrame {
                                 .addComponent(creador)
                                 .addGroup(acercaDeReplacerLayout.createSequentialGroup()
                                     .addGap(48, 48, 48)
-                                    .addComponent(version)
-                                    .addGap(55, 55, 55)))
-                            .addGap(0, 0, Short.MAX_VALUE))
-                        .addGroup(acercaDeReplacerLayout.createSequentialGroup()
-                            .addGroup(acercaDeReplacerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(acercaDeReplacerLayout.createSequentialGroup()
-                                    .addComponent(replacer)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(acercaDeReplacerLayout.createSequentialGroup()
-                                    .addGap(0, 8, Short.MAX_VALUE)
-                                    .addComponent(iconoApp)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(imagenCC)))
-                            .addContainerGap())))
+                                    .addComponent(version)))
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             );
             acercaDeReplacerLayout.setVerticalGroup(
                 acercaDeReplacerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,11 +195,11 @@ public class Replacer extends javax.swing.JFrame {
                     .addGroup(acercaDeReplacerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(imagenCC)
                         .addComponent(iconoApp))
-                    .addContainerGap(23, Short.MAX_VALUE))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
 
             setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-            setTitle("Replacer · v0.01a");
+            setTitle("Replacer · v0.02a");
             setIconImage(getIconImage());
             setResizable(false);
             addWindowListener(new java.awt.event.WindowAdapter() {
@@ -188,36 +209,39 @@ public class Replacer extends javax.swing.JFrame {
             });
 
             primerCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            primerCampo.setText("Primer campo:");
+            primerCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_1_black_18px.png"))); // NOI18N
 
             segundoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            segundoCampo.setText("Segundo campo:");
+            segundoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_2_black_18px.png"))); // NOI18N
 
             tercerCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            tercerCampo.setText("Tercer campo:");
+            tercerCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_3_black_18px.png"))); // NOI18N
 
             cuartoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            cuartoCampo.setText("Cuarto campo:");
+            cuartoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_4_black_18px.png"))); // NOI18N
 
             quintoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            quintoCampo.setText("Quinto campo:");
+            quintoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_5_black_18px.png"))); // NOI18N
 
             sextoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            sextoCampo.setText("Sexto campo:");
+            sextoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_6_black_18px.png"))); // NOI18N
 
             septimoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            septimoCampo.setText("Séptimo campo:");
+            septimoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_7_black_18px.png"))); // NOI18N
 
             octavoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            octavoCampo.setText("Octavo campo:");
+            octavoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_8_black_18px.png"))); // NOI18N
 
             novenoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            novenoCampo.setText("Noveno campo:");
+            novenoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_9_black_18px.png"))); // NOI18N
 
             decimoCampo.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-            decimoCampo.setText("Décimo campo:");
+            decimoCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_filter_10_black_18px.png"))); // NOI18N
 
-            reemplazar.setText("Reemplazar");
+            reemplazar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_autorenew_black_18dp.png"))); // NOI18N
+            reemplazar.setBorder(null);
+            reemplazar.setBorderPainted(false);
+            reemplazar.setContentAreaFilled(false);
             reemplazar.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     reemplazarActionPerformed(evt);
@@ -239,17 +263,167 @@ public class Replacer extends javax.swing.JFrame {
 
             etiquetaVacia.setText(" ");
 
-            borrarTodo.setText("Borrar todo");
+            borrarTodo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_highlight_off_black_18dp.png"))); // NOI18N
+            borrarTodo.setBorder(null);
+            borrarTodo.setBorderPainted(false);
+            borrarTodo.setContentAreaFilled(false);
             borrarTodo.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     borrarTodoActionPerformed(evt);
                 }
             });
 
+            barra.setFloatable(false);
+            barra.setRollover(true);
+
+            nuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_insert_drive_file_black_18px.png"))); // NOI18N
+            nuevo.setBorderPainted(false);
+            nuevo.setContentAreaFilled(false);
+            nuevo.setFocusable(false);
+            nuevo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+            nuevo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+            nuevo.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    nuevoActionPerformed(evt);
+                }
+            });
+            barra.add(nuevo);
+
+            cargarBarra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_archive_black_20px.png"))); // NOI18N
+            cargarBarra.setBorderPainted(false);
+            cargarBarra.setContentAreaFilled(false);
+            cargarBarra.setFocusable(false);
+            cargarBarra.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+            cargarBarra.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+            cargarBarra.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    cargarBarraActionPerformed(evt);
+                }
+            });
+            barra.add(cargarBarra);
+
+            campoUno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoUno.setBorder(null);
+            campoUno.setBorderPainted(false);
+            campoUno.setContentAreaFilled(false);
+            campoUno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+            campoUno.setFocusPainted(false);
+            campoUno.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoUnoActionPerformed(evt);
+                }
+            });
+
+            campoDos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoDos.setBorder(null);
+            campoDos.setBorderPainted(false);
+            campoDos.setContentAreaFilled(false);
+            campoDos.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoDosActionPerformed(evt);
+                }
+            });
+
+            campoTres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoTres.setBorder(null);
+            campoTres.setBorderPainted(false);
+            campoTres.setContentAreaFilled(false);
+            campoTres.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoTresActionPerformed(evt);
+                }
+            });
+
+            campoCuatro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoCuatro.setBorder(null);
+            campoCuatro.setBorderPainted(false);
+            campoCuatro.setContentAreaFilled(false);
+            campoCuatro.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoCuatroActionPerformed(evt);
+                }
+            });
+
+            campoCinco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoCinco.setBorder(null);
+            campoCinco.setBorderPainted(false);
+            campoCinco.setContentAreaFilled(false);
+            campoCinco.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoCincoActionPerformed(evt);
+                }
+            });
+
+            campoSeis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoSeis.setBorder(null);
+            campoSeis.setBorderPainted(false);
+            campoSeis.setContentAreaFilled(false);
+            campoSeis.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoSeisActionPerformed(evt);
+                }
+            });
+
+            campoSiete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoSiete.setBorder(null);
+            campoSiete.setBorderPainted(false);
+            campoSiete.setContentAreaFilled(false);
+            campoSiete.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoSieteActionPerformed(evt);
+                }
+            });
+
+            campoOcho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoOcho.setBorder(null);
+            campoOcho.setBorderPainted(false);
+            campoOcho.setContentAreaFilled(false);
+            campoOcho.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoOchoActionPerformed(evt);
+                }
+            });
+
+            campoNueve.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoNueve.setBorder(null);
+            campoNueve.setBorderPainted(false);
+            campoNueve.setContentAreaFilled(false);
+            campoNueve.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoNueveActionPerformed(evt);
+                }
+            });
+
+            campoDiez.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_backspace_black_18px.png"))); // NOI18N
+            campoDiez.setBorder(null);
+            campoDiez.setBorderPainted(false);
+            campoDiez.setContentAreaFilled(false);
+            campoDiez.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    campoDiezActionPerformed(evt);
+                }
+            });
+
+            jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+            jLabel1.setText("Buscar");
+
+            jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+            jLabel2.setText("Reemplazar");
+
             archivo.setText("Archivo");
 
+            nuevoMenu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+            nuevoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_insert_drive_file_black_18px.png"))); // NOI18N
+            nuevoMenu.setText("Nuevo archivo");
+            nuevoMenu.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    nuevoMenuActionPerformed(evt);
+                }
+            });
+            archivo.add(nuevoMenu);
+
             cargar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
-            cargar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/reply.png"))); // NOI18N
+            cargar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_archive_black_20px.png"))); // NOI18N
             cargar.setText("Cargar archivo");
             cargar.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,6 +433,7 @@ public class Replacer extends javax.swing.JFrame {
             archivo.add(cargar);
             archivo.add(separadorMenu);
 
+            salir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
             salir.setText("Salir");
             salir.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -269,17 +444,24 @@ public class Replacer extends javax.swing.JFrame {
 
             Menu.add(archivo);
 
-            acercaDe.setText("Acerca de");
-            acercaDe.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    acercaDeMouseClicked(evt);
-                }
-            });
-            acercaDe.addActionListener(new java.awt.event.ActionListener() {
+            acercaDe.setText("Ayuda");
+
+            contenido.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+            contenido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_help_black_18px.png"))); // NOI18N
+            contenido.setText("Contenido");
+            contenido.setEnabled(false);
+            acercaDe.add(contenido);
+            acercaDe.add(separadorMenu2);
+
+            acercaDeMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ic_copyright_black_18px.png"))); // NOI18N
+            acercaDeMenu.setText("Acerca de");
+            acercaDeMenu.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    acercaDeActionPerformed(evt);
+                    acercaDeMenuActionPerformed(evt);
                 }
             });
+            acercaDe.add(acercaDeMenu);
+
             Menu.add(acercaDe);
 
             setJMenuBar(Menu);
@@ -288,143 +470,206 @@ public class Replacer extends javax.swing.JFrame {
             getContentPane().setLayout(layout);
             layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(barra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(separador)
-                        .addComponent(separadorAbajo, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
                             .addComponent(borrarTodo)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(reemplazar))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tercerCampo)
-                                .addComponent(cuartoCampo)
-                                .addComponent(quintoCampo)
-                                .addComponent(sextoCampo)
-                                .addComponent(septimoCampo)
-                                .addComponent(octavoCampo)
-                                .addComponent(novenoCampo)
-                                .addComponent(decimoCampo)
-                                .addComponent(primerCampo)
-                                .addComponent(segundoCampo))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tresIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(unoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(dosIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cuatroIzquierda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ochoIzquierda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(nueveIzquierda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(diezIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(sieteIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cincoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(seisIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(unoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(dosDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tresDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cuatroDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cincoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ochoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(nueveDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(diezDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(sieteDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(seisDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(0, 16, Short.MAX_VALUE))
+                            .addComponent(imagenReplacer)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(reemplazar)
+                            .addContainerGap(19, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cargado)
-                                .addComponent(creado)
-                                .addComponent(etiquetaVacia))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textoCreado)
-                                .addComponent(textoCargado, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(separador)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(imagenReplacer)
-                                        .addComponent(creacionTotal))
-                                    .addGap(0, 0, Short.MAX_VALUE)))))
-                    .addContainerGap())
+                                        .addComponent(cargado)
+                                        .addComponent(creado)
+                                        .addComponent(etiquetaVacia))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(textoCargado)
+                                        .addComponent(textoCreado)
+                                        .addComponent(creacionTotal)))
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(separadorAbajo)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(primerCampo, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addComponent(segundoCampo, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                            .addComponent(tercerCampo, javax.swing.GroupLayout.Alignment.TRAILING))
+                                                        .addComponent(cuartoCampo, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(quintoCampo, javax.swing.GroupLayout.Alignment.TRAILING))
+                                                    .addComponent(sextoCampo, javax.swing.GroupLayout.Alignment.TRAILING))
+                                                .addComponent(septimoCampo, javax.swing.GroupLayout.Alignment.TRAILING))
+                                            .addComponent(octavoCampo, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addComponent(novenoCampo, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(decimoCampo, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(tresIzquierda)
+                                                .addComponent(unoIzquierda)
+                                                .addComponent(dosIzquierda)
+                                                .addComponent(cuatroIzquierda, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(ochoIzquierda, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(nueveIzquierda, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(diezIzquierda)
+                                                .addComponent(sieteIzquierda)
+                                                .addComponent(cincoIzquierda)
+                                                .addComponent(seisIzquierda))
+                                            .addGap(18, 18, 18)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(unoDerecha)
+                                                .addComponent(dosDerecha)
+                                                .addComponent(tresDerecha)
+                                                .addComponent(cuatroDerecha)
+                                                .addComponent(cincoDerecha)
+                                                .addComponent(ochoDerecha)
+                                                .addComponent(nueveDerecha)
+                                                .addComponent(diezDerecha)
+                                                .addComponent(sieteDerecha)
+                                                .addComponent(seisDerecha))
+                                            .addGap(18, 18, 18)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(campoUno)
+                                                .addComponent(campoDos)
+                                                .addComponent(campoTres)
+                                                .addComponent(campoCuatro)
+                                                .addComponent(campoCinco)
+                                                .addComponent(campoSeis)
+                                                .addComponent(campoSiete)
+                                                .addComponent(campoOcho)
+                                                .addComponent(campoNueve)
+                                                .addComponent(campoDiez)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(40, 40, 40)
+                                            .addComponent(jLabel1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel2)
+                                            .addGap(64, 64, 64)))))
+                            .addContainerGap())))
             );
             layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(6, 6, 6)
-                    .addComponent(imagenReplacer)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(barra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(textoCargado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(cargado))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(creado)
-                        .addComponent(textoCreado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textoCreado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(creacionTotal)
                         .addComponent(etiquetaVacia))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(primerCampo)
-                        .addComponent(unoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(unoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(segundoCampo)
-                        .addComponent(dosIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(dosDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(primerCampo)
+                                .addComponent(unoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoUno))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(segundoCampo)
+                                    .addComponent(dosIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(campoDos))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tercerCampo)
+                                .addComponent(tresIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoTres))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cuartoCampo)
+                                .addComponent(cuatroIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoCuatro))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(quintoCampo)
+                                .addComponent(cincoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoCinco))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sextoCampo, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(seisIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(campoSeis))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(septimoCampo)
+                                .addComponent(sieteIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoSiete))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(octavoCampo)
+                                .addComponent(ochoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(campoOcho))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(novenoCampo)
+                                        .addComponent(nueveIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(decimoCampo)
+                                        .addComponent(diezIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(campoNueve)
+                                    .addGap(8, 8, 8)
+                                    .addComponent(campoDiez)))
+                            .addGap(18, 18, 18)
+                            .addComponent(separadorAbajo, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(unoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(dosDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tresDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cuatroDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cincoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(seisDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(sieteDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(ochoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(nueveDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(diezDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(tercerCampo)
-                        .addComponent(tresIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tresDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cuartoCampo)
-                        .addComponent(cuatroIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cuatroDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(quintoCampo)
-                        .addComponent(cincoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cincoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(sextoCampo)
-                        .addComponent(seisIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(seisDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(septimoCampo)
-                        .addComponent(sieteIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(sieteDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(octavoCampo)
-                        .addComponent(ochoIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ochoDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(novenoCampo)
-                        .addComponent(nueveIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nueveDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(decimoCampo)
-                        .addComponent(diezIzquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(diezDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(separadorAbajo, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(reemplazar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(borrarTodo))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(borrarTodo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(reemplazar))
+                        .addComponent(imagenReplacer, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
 
@@ -451,12 +696,30 @@ public class Replacer extends javax.swing.JFrame {
         }
     }
 
-    private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
-        cargarArchivo();
-        contador++;
-    }//GEN-LAST:event_cargarActionPerformed
+    public void borrar() {
+        unoIzquierda.setText("");
+        dosIzquierda.setText("");
+        tresIzquierda.setText("");
+        cuatroIzquierda.setText("");
+        cincoIzquierda.setText("");
+        seisIzquierda.setText("");
+        sieteIzquierda.setText("");
+        ochoIzquierda.setText("");
+        nueveIzquierda.setText("");
+        diezIzquierda.setText("");
+        unoDerecha.setText("");
+        dosDerecha.setText("");
+        tresDerecha.setText("");
+        cuatroDerecha.setText("");
+        cincoDerecha.setText("");
+        seisDerecha.setText("");
+        sieteDerecha.setText("");
+        ochoDerecha.setText("");
+        nueveDerecha.setText("");
+        diezDerecha.setText("");
+    }
 
-    private void reemplazarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reemplazarActionPerformed
+    public void reemplazarArchivo() {
         if (nombreArchivo == null) {
             creacionTotal.setText("¡No has cargado nada!");
         } else {
@@ -482,6 +745,19 @@ public class Replacer extends javax.swing.JFrame {
                 contadorMensajes++;
             }
         }
+    }
+
+    public void acercaDe() {
+        acercaDeReplacer.setLocationRelativeTo(null);
+        acercaDeReplacer.setVisible(true);
+    }
+    private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
+        cargarArchivo();
+        contador++;
+    }//GEN-LAST:event_cargarActionPerformed
+
+    private void reemplazarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reemplazarActionPerformed
+        reemplazarArchivo();
     }//GEN-LAST:event_reemplazarActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
@@ -492,38 +768,70 @@ public class Replacer extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formWindowClosing
 
-    private void acercaDeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acercaDeMouseClicked
-       acercaDeReplacer.setLocationRelativeTo(null);
-       acercaDeReplacer.setVisible(true);
-    }//GEN-LAST:event_acercaDeMouseClicked
-
-    private void acercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeActionPerformed
-       acercaDeReplacer.setLocationRelativeTo(null);
-       acercaDeReplacer.setVisible(true);
-    }//GEN-LAST:event_acercaDeActionPerformed
-
     private void borrarTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarTodoActionPerformed
-        unoIzquierda.setText("");
-        dosIzquierda.setText("");
-        tresIzquierda.setText("");
-        cuatroIzquierda.setText("");
-        cincoIzquierda.setText("");
-        seisIzquierda.setText("");
-        sieteIzquierda.setText("");
-        ochoIzquierda.setText("");
-        nueveIzquierda.setText("");
-        diezIzquierda.setText("");
-        unoDerecha.setText("");
-        dosDerecha.setText("");
-        tresDerecha.setText("");
-        cuatroDerecha.setText("");
-        cincoDerecha.setText("");
-        seisDerecha.setText("");
-        sieteDerecha.setText("");
-        ochoDerecha.setText("");
-        nueveDerecha.setText("");
-        diezDerecha.setText("");
+        borrar();
     }//GEN-LAST:event_borrarTodoActionPerformed
+
+    private void nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoActionPerformed
+        borrar();
+    }//GEN-LAST:event_nuevoActionPerformed
+
+    private void cargarBarraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarBarraActionPerformed
+        cargarArchivo();
+    }//GEN-LAST:event_cargarBarraActionPerformed
+
+    private void campoUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoUnoActionPerformed
+        unoIzquierda.setText("");
+        unoDerecha.setText("");
+    }//GEN-LAST:event_campoUnoActionPerformed
+
+    private void campoDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDosActionPerformed
+        dosIzquierda.setText("");
+        dosDerecha.setText("");
+    }//GEN-LAST:event_campoDosActionPerformed
+
+    private void campoTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTresActionPerformed
+        tresIzquierda.setText("");
+        tresDerecha.setText("");
+    }//GEN-LAST:event_campoTresActionPerformed
+
+    private void campoCuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCuatroActionPerformed
+        cuatroIzquierda.setText("");
+        cuatroDerecha.setText("");
+    }//GEN-LAST:event_campoCuatroActionPerformed
+
+    private void campoCincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCincoActionPerformed
+        cincoIzquierda.setText("");
+        cincoDerecha.setText("");
+    }//GEN-LAST:event_campoCincoActionPerformed
+
+    private void campoSeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSeisActionPerformed
+        seisIzquierda.setText("");
+        seisDerecha.setText("");    }//GEN-LAST:event_campoSeisActionPerformed
+
+    private void campoSieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSieteActionPerformed
+        sieteIzquierda.setText("");
+        sieteDerecha.setText("");    }//GEN-LAST:event_campoSieteActionPerformed
+
+    private void campoOchoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoOchoActionPerformed
+        ochoIzquierda.setText("");
+        ochoDerecha.setText("");    }//GEN-LAST:event_campoOchoActionPerformed
+
+    private void campoNueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNueveActionPerformed
+        nueveIzquierda.setText("");
+        nueveDerecha.setText("");    }//GEN-LAST:event_campoNueveActionPerformed
+
+    private void campoDiezActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDiezActionPerformed
+        diezIzquierda.setText("");
+        diezDerecha.setText("");    }//GEN-LAST:event_campoDiezActionPerformed
+
+    private void acercaDeMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acercaDeMenuActionPerformed
+        acercaDe();
+    }//GEN-LAST:event_acercaDeMenuActionPerformed
+
+    private void nuevoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoMenuActionPerformed
+        borrar();
+    }//GEN-LAST:event_nuevoMenuActionPerformed
 
     @Override
     public Image getIconImage() {
@@ -542,8 +850,8 @@ public class Replacer extends javax.swing.JFrame {
             JFrame.setDefaultLookAndFeelDecorated(true);
             JDialog.setDefaultLookAndFeelDecorated(true);
             //UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-            //UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+            //UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
             //UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
         } catch (Exception e) {
             //e.printStackTrace();
@@ -561,13 +869,28 @@ public class Replacer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Menu;
     private javax.swing.JMenu acercaDe;
+    private javax.swing.JMenuItem acercaDeMenu;
     private javax.swing.JFrame acercaDeReplacer;
     private javax.swing.JMenu archivo;
+    private javax.swing.JToolBar barra;
+    private javax.swing.ButtonGroup barraGrupo;
     private javax.swing.JToggleButton borrarTodo;
+    private javax.swing.JButton campoCinco;
+    private javax.swing.JButton campoCuatro;
+    private javax.swing.JButton campoDiez;
+    private javax.swing.JButton campoDos;
+    private javax.swing.JButton campoNueve;
+    private javax.swing.JButton campoOcho;
+    private javax.swing.JButton campoSeis;
+    private javax.swing.JButton campoSiete;
+    private javax.swing.JButton campoTres;
+    private javax.swing.JButton campoUno;
     private javax.swing.JLabel cargado;
     private javax.swing.JMenuItem cargar;
+    private javax.swing.JButton cargarBarra;
     private javax.swing.JTextField cincoDerecha;
     private javax.swing.JTextField cincoIzquierda;
+    private javax.swing.JMenuItem contenido;
     private javax.swing.JLabel creacionTotal;
     private javax.swing.JLabel creado;
     private javax.swing.JLabel creador;
@@ -583,10 +906,15 @@ public class Replacer extends javax.swing.JFrame {
     private javax.swing.JLabel iconoApp;
     private javax.swing.JLabel imagenCC;
     private javax.swing.JLabel imagenReplacer;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel licencia;
     private javax.swing.JLabel novenoCampo;
     private javax.swing.JTextField nueveDerecha;
     private javax.swing.JTextField nueveIzquierda;
+    private javax.swing.JButton nuevo;
+    private javax.swing.JMenuItem nuevoMenu;
     private javax.swing.JTextField ochoDerecha;
     private javax.swing.JTextField ochoIzquierda;
     private javax.swing.JLabel octavoCampo;
@@ -602,6 +930,7 @@ public class Replacer extends javax.swing.JFrame {
     private javax.swing.JSeparator separador;
     private javax.swing.JSeparator separadorAbajo;
     private javax.swing.JPopupMenu.Separator separadorMenu;
+    private javax.swing.JSeparator separadorMenu2;
     private javax.swing.JLabel septimoCampo;
     private javax.swing.JLabel sextoCampo;
     private javax.swing.JTextField sieteDerecha;
