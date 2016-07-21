@@ -28,7 +28,6 @@
         <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection component="Form" name="iconImage" type="property"/>
         </Property>
-        <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[220, 240]"/>
         </Property>
@@ -40,21 +39,11 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="replacer" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="iconoApp" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="imagenCC" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
@@ -64,9 +53,25 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                                   <Component id="version" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="replacer" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                                  <Component id="iconoApp" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="imagenCC" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -88,7 +93,7 @@
                       <Component id="imagenCC" min="-2" max="-2" attributes="0"/>
                       <Component id="iconoApp" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -111,9 +116,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="creador">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="11" style="0"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Aplicaci&#xf3;n creada por Koutei_Cheke."/>
           </Properties>
         </Component>
@@ -126,24 +128,16 @@
         </Component>
         <Component class="javax.swing.JLabel" name="licencia">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="11" style="0"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Bajo licencia Creative Commons."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="version">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="11" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Versi&#xf3;n v0.02a"/>
+            <Property name="text" type="java.lang.String" value="Versi&#xf3;n v0.01a"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.ButtonGroup" name="barraGrupo">
-    </Component>
     <Menu class="javax.swing.JMenuBar" name="Menu">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="archivo">
@@ -151,27 +145,13 @@
             <Property name="text" type="java.lang.String" value="Archivo"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="nuevoMenu">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+N"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/resources/ic_insert_drive_file_black_18px.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Nuevo archivo"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nuevoMenuActionPerformed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="cargar">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+O"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/resources/ic_archive_black_20px.png"/>
+                  <Image iconType="3" name="/resources/reply.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cargar archivo"/>
               </Properties>
@@ -183,9 +163,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="salir">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+Q"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
               <Events>
@@ -196,42 +173,19 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="acercaDe">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ayuda"/>
+            <Property name="text" type="java.lang.String" value="Acerca de"/>
           </Properties>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="contenido">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="F1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/resources/ic_help_black_18px.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Contenido"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-            </MenuItem>
-            <MenuItem class="javax.swing.JPopupMenu$Separator" name="separadorMenu2">
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="acercaDeMenu">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/resources/ic_copyright_black_18px.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Acerca de"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acercaDeMenuActionPerformed"/>
-              </Events>
-            </MenuItem>
-          </SubComponents>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="acercaDeMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acercaDeActionPerformed"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Replacer &#xb7; v0.02a"/>
+    <Property name="title" type="java.lang.String" value="Replacer &#xb7; v0.01a"/>
     <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
       <Connection component="Form" name="iconImage" type="property"/>
     </Property>
@@ -260,125 +214,87 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="barra" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  <Component id="separador" alignment="0" max="32767" attributes="0"/>
+                  <Component id="separadorAbajo" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="borrarTodo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="imagenReplacer" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="reemplazar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="separador" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cargado" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="creado" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="etiquetaVacia" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textoCargado" max="32767" attributes="0"/>
-                                  <Component id="textoCreado" max="32767" attributes="0"/>
-                                  <Component id="creacionTotal" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
-                          <Component id="separadorAbajo" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                      <Component id="primerCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="segundoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="tercerCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="cuartoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="quintoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="sextoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="septimoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="octavoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="novenoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="decimoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="tresIzquierda" max="32767" attributes="0"/>
-                                          <Component id="unoIzquierda" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="dosIzquierda" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cuatroIzquierda" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="ochoIzquierda" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="nueveIzquierda" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="diezIzquierda" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="sieteIzquierda" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="cincoIzquierda" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="seisIzquierda" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="unoDerecha" max="32767" attributes="0"/>
-                                          <Component id="dosDerecha" max="32767" attributes="0"/>
-                                          <Component id="tresDerecha" max="32767" attributes="0"/>
-                                          <Component id="cuatroDerecha" max="32767" attributes="0"/>
-                                          <Component id="cincoDerecha" max="32767" attributes="0"/>
-                                          <Component id="ochoDerecha" max="32767" attributes="0"/>
-                                          <Component id="nueveDerecha" max="32767" attributes="0"/>
-                                          <Component id="diezDerecha" max="32767" attributes="0"/>
-                                          <Component id="sieteDerecha" max="32767" attributes="0"/>
-                                          <Component id="seisDerecha" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="campoUno" max="-2" attributes="0"/>
-                                          <Component id="campoDos" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoTres" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoCuatro" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoCinco" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoSeis" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoSiete" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoOcho" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoNueve" min="-2" max="-2" attributes="0"/>
-                                          <Component id="campoDiez" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+                          <Component id="tercerCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="cuartoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="quintoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="sextoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="septimoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="octavoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="novenoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="decimoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="primerCampo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="segundoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="tresIzquierda" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="unoIzquierda" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="dosIzquierda" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="cuatroIzquierda" alignment="1" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="ochoIzquierda" alignment="1" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="nueveIzquierda" alignment="1" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="diezIzquierda" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="sieteIzquierda" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="cincoIzquierda" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="seisIzquierda" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="unoDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="dosDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="tresDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="cuatroDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="cincoDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="ochoDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="nueveDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="diezDerecha" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="sieteDerecha" min="-2" pref="104" max="-2" attributes="0"/>
+                          <Component id="seisDerecha" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="cargado" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="creado" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="etiquetaVacia" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="textoCreado" max="32767" attributes="0"/>
+                          <Component id="textoCargado" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="imagenReplacer" min="-2" max="-2" attributes="0"/>
+                                  <Component id="creacionTotal" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Component id="barra" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Component id="imagenReplacer" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="textoCargado" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cargado" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -386,125 +302,81 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="creado" min="-2" max="-2" attributes="0"/>
-                  <Component id="textoCreado" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="textoCreado" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="creacionTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="etiquetaVacia" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="separador" min="-2" pref="2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="primerCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="unoIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="unoDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="segundoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dosIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dosDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="primerCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="unoIzquierda" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoUno" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="segundoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="dosIzquierda" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="campoDos" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tercerCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="tresIzquierda" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoTres" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cuartoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cuatroIzquierda" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoCuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="quintoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cincoIzquierda" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoCinco" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="sextoCampo" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="seisIzquierda" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="campoSeis" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="septimoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="sieteIzquierda" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoSiete" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="octavoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ochoIzquierda" min="-2" max="-2" attributes="0"/>
-                          <Component id="campoOcho" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="novenoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nueveIzquierda" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="decimoCampo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="diezIzquierda" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="campoNueve" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="campoDiez" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="separadorAbajo" min="-2" pref="10" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="unoDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="dosDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tresDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cuatroDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cincoDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="seisDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="sieteDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="ochoDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="nueveDerecha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="diezDerecha" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tercerCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tresIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tresDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="borrarTodo" alignment="0" max="32767" attributes="0"/>
-                      <Component id="reemplazar" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="imagenReplacer" min="-2" pref="49" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cuartoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cuatroIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cuatroDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="quintoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cincoIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cincoDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="sextoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="seisIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="seisDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="septimoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sieteIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sieteDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="octavoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ochoIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ochoDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="novenoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nueveIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nueveDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="decimoCampo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="diezIzquierda" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="diezDerecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="separadorAbajo" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="reemplazar" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="borrarTodo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -517,9 +389,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_1_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Primer campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="segundoCampo">
@@ -527,9 +397,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_2_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Segundo campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="tercerCampo">
@@ -537,9 +405,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_3_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Tercer campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="cuartoCampo">
@@ -547,9 +413,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_4_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Cuarto campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="quintoCampo">
@@ -557,9 +421,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_5_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Quinto campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="sextoCampo">
@@ -567,9 +429,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_6_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Sexto campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="septimoCampo">
@@ -577,9 +437,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_7_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="S&#xe9;ptimo campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="octavoCampo">
@@ -587,9 +445,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_8_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Octavo campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="novenoCampo">
@@ -597,9 +453,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_9_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Noveno campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="decimoCampo">
@@ -607,9 +461,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="11" style="0"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_filter_10_black_18px.png"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="D&#xe9;cimo campo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="unoIzquierda">
@@ -654,14 +506,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="reemplazar">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_autorenew_black_18dp.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Reemplazar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reemplazarActionPerformed"/>
@@ -716,230 +561,11 @@
     </Component>
     <Component class="javax.swing.JToggleButton" name="borrarTodo">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_highlight_off_black_18dp.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="Borrar todo"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="borrarTodoActionPerformed"/>
       </Events>
-    </Component>
-    <Container class="javax.swing.JToolBar" name="barra">
-      <Properties>
-        <Property name="floatable" type="boolean" value="false"/>
-        <Property name="rollover" type="boolean" value="true"/>
-      </Properties>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JButton" name="nuevo">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/ic_insert_drive_file_black_18px.png"/>
-            </Property>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
-            <Property name="focusable" type="boolean" value="false"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-            <Property name="verticalTextPosition" type="int" value="3"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nuevoActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="cargarBarra">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/resources/ic_archive_black_20px.png"/>
-            </Property>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
-            <Property name="focusable" type="boolean" value="false"/>
-            <Property name="horizontalTextPosition" type="int" value="0"/>
-            <Property name="verticalTextPosition" type="int" value="3"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cargarBarraActionPerformed"/>
-          </Events>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JButton" name="campoUno">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
-        </Property>
-        <Property name="focusPainted" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoUnoActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoDos">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDosActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoTres">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoTresActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoCuatro">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCuatroActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoCinco">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoCincoActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoSeis">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoSeisActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoSiete">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoSieteActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoOcho">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoOchoActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoNueve">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoNueveActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="campoDiez">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/resources/ic_backspace_black_18px.png"/>
-        </Property>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="null"/>
-        </Property>
-        <Property name="borderPainted" type="boolean" value="false"/>
-        <Property name="contentAreaFilled" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDiezActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JSeparator" name="jSeparator1">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="11" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="11" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Reemplazar"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>
