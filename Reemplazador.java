@@ -10,7 +10,8 @@ import java.io.*;
 public class Reemplazador {
 
     Scanner entradaDeFichero = null;
-    PrintWriter salidaDeFichero = null;
+    Writer salidaDeFichero = null;
+    Scanner in = new Scanner(System.in);
 
     public void reemplazar(String nombreFichero,
             String unoIzquierda, String unoDerecha,
@@ -24,19 +25,17 @@ public class Reemplazador {
             String nueveIzquierda, String nueveDerecha,
             String diezIzquierda, String diezDerecha) {
         try {
-            entradaDeFichero = new Scanner(
-                    new BufferedReader(
-                            new FileReader(nombreFichero)
-                    )
+            salidaDeFichero = new BufferedWriter(
+                    new OutputStreamWriter(
+                            new FileOutputStream(String.format("%s.kc", nombreFichero)
+                            ), "UTF8")
             );
 
-            salidaDeFichero = new PrintWriter(
-                    new BufferedWriter(
-                            new FileWriter(
-                                    String.format("%s.kc", nombreFichero)
-                            )
-                    )
+            entradaDeFichero = new Scanner(
+                    new InputStreamReader(
+                            new FileInputStream(nombreFichero), "UTF8")
             );
+
             String entrada;
             while (entradaDeFichero.hasNextLine()) {
                 String salida = "";
@@ -63,9 +62,12 @@ public class Reemplazador {
                             .replace(ochoIzquierda, ochoDerecha)
                             .replace(nueveIzquierda, nueveDerecha)
                             .replace(diezIzquierda, diezDerecha);
-                    salidaDeFichero.println(salida);
+                    salidaDeFichero.write(salida);
+                    salidaDeFichero.write("\n");
                 } else {
-                    salidaDeFichero.println(entrada);
+                    salidaDeFichero.write(entrada);
+                    salidaDeFichero.write("\n");
+
                 }
             }
         } catch (Exception ex) {
@@ -75,7 +77,56 @@ public class Reemplazador {
                 entradaDeFichero.close();
             }
             if (salidaDeFichero != null) {
-                salidaDeFichero.close();
+                try {
+                    salidaDeFichero.close();
+                } catch (IOException ex) {
+
+                }
+            }
+        }
+    }
+    public void reemplazar(String nombreFichero,
+            String unoIzquierda, String unoDerecha) {
+        try {
+            salidaDeFichero = new BufferedWriter(
+                    new OutputStreamWriter(
+                            new FileOutputStream(String.format("%s.kc", nombreFichero)
+                            ), "UTF8")
+            );
+
+            entradaDeFichero = new Scanner(
+                    new InputStreamReader(
+                            new FileInputStream(nombreFichero), "UTF8")
+            );
+
+            String entrada;
+            while (entradaDeFichero.hasNextLine()) {
+                String salida = "";
+                entrada = entradaDeFichero.nextLine();
+                //System.out.println(entrada);
+                if (entrada.contains(unoIzquierda)) {
+                    salida = entrada
+                            .replace(unoIzquierda, unoDerecha);
+                    salidaDeFichero.write(salida);
+                    salidaDeFichero.write("\n");
+                } else {
+                    salidaDeFichero.write(entrada);
+                    salidaDeFichero.write("\n");
+
+                }
+            }
+        } catch (Exception ex) {
+            //ex.printStackTrace();
+        } finally {
+            if (entradaDeFichero != null) {
+                entradaDeFichero.close();
+            }
+            if (salidaDeFichero != null) {
+                try {
+                    salidaDeFichero.close();
+                } catch (IOException ex) {
+
+                }
             }
         }
     }
