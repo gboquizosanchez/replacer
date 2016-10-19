@@ -6,7 +6,7 @@ import java.io.*;
 /**
  * REPLACER
  *
- * @author Cheke
+ * @author Koutei_Cheke
  * @version 0.05a
  */
 public class Logic {

@@ -13,7 +13,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author Cheke
+ * @author Koutei_Cheke
  * @version 0.05a
  */
 public class Replacer extends javax.swing.JFrame {
