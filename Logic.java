@@ -442,45 +442,45 @@ public class Logic {
                 // Para posible archivo de log en futuras versiones.
                 counter++;
                 writeBackup(inputString);
-                String[] trozos = splitString(inputString);
-                if (trozos[0].contains("Dialogue:")) {
+                String[] pieces = splitString(inputString);
+                if (pieces[0].contains("Dialogue:")) {
                     if (flag == 0) { // Con 0 cambia el Estilo al Actor.
-                        styleToActor(trozos);
+                        styleToActor(pieces);
                         write(outputString);
                     } else if (flag == 1) { // Con 1 cambia el Actor al Estilo.
-                        actorToStyle(trozos);
+                        actorToStyle(pieces);
                         write(outputString);
                     } else if (flag == 2) { // Con 2 borra todas las etiquetas.
-                        eraseTags(trozos);
+                        eraseTags(pieces);
                         write(outputString);
                     } else if (flag == 3) { // Con 3 pone las etiquetas de Pensamiento.
-                        putThoughtTags(trozos);
+                        putThoughtTags(pieces);
                         write(outputString);
                     } else if (flag == 4) { // Con 4 pone las etiquetas de Flashback.
-                        putFlashbackTags(trozos);
+                        putFlashbackTags(pieces);
                         write(outputString);
                     } else if (flag == 5) { // Con 5 pone las etiquetas de Radio.
-                        putRadioTags(trozos);
+                        putRadioTags(pieces);
                         write(outputString);
                     } else if (flag == 6) { // Con 6 pone cursivas.
-                        putItalicTags(trozos);
+                        putItalicTags(pieces);
                         write(outputString);
                     } else if (flag == 7) { // Con 7 pone difuminados.
-                        putBlurTags(trozos);
+                        putBlurTags(pieces);
                         write(outputString);
                     } else if (flag == 8) { // Con 8 pone {} para traducir.
-                        putAllTags(trozos);
+                        putAllTags(pieces);
                         write(outputString);
                     } else if (flag == 9) {
-                        putOnTopTags(trozos);
+                        putOnTopTags(pieces);
                         write(outputString);
                     } else if (flag == -1) {
-                        putThoughtTags(trozos);
-                        putFlashbackTags(trozos);
-                        putRadioTags(trozos);
-                        putItalicTags(trozos);
-                        putBlurTags(trozos);
-                        putOnTopTags(trozos);
+                        putThoughtTags(pieces);
+                        putFlashbackTags(pieces);
+                        putRadioTags(pieces);
+                        putItalicTags(pieces);
+                        putBlurTags(pieces);
+                        putOnTopTags(pieces);
                         write(outputString);
                     }
                 } else {
