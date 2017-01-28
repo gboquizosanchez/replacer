@@ -417,7 +417,6 @@ public class Logic {
      * return.
      */
     public File save(String filename, int flag) {
-        // Para posible archivo de log en futuras versiones.
         int counter = 0;
         File tmp = new File(filename + ".tmp");
         try {
@@ -439,7 +438,6 @@ public class Logic {
             String inputString;
             while (fileInput.hasNextLine()) {
                 inputString = fileInput.nextLine();
-                // Para posible archivo de log en futuras versiones.
                 counter++;
                 writeBackup(inputString);
                 String[] pieces = splitString(inputString);
@@ -523,8 +521,7 @@ public class Logic {
      */
     public File save(String filename,
             String[] field) {
-        // Para posible archivo de log en futuras versiones.
-        int contador = 0;
+        int counter = 0;
         File tmp = new File(filename + ".tmp");
         try {
             fileOutput = new BufferedWriter(
@@ -545,14 +542,12 @@ public class Logic {
             String inputString;
             while (fileInput.hasNextLine()) {
                 inputString = fileInput.nextLine();
-                // Para posible archivo de log en futuras versiones.
-                contador++;
+                counter++;
                 writeBackup(inputString);
                 replace(field, inputString, outputString);
             }
-            // Posible archivo de log para futuras versiones.
             System.out.println(String.format("Se han copiado %s líneas",
-                    contador));
+                    counter));
 
         } catch (Exception e) {
 
