@@ -12,6 +12,8 @@
 hs_err_pid*
 src\resources\PSD
 nbproject
-test
 build
+test
 /dist/
+src/
+build.xml

@@ -83,31 +83,42 @@ public class Logic {
      */
     public void replace(String[] field, String inputString, String outputString)
             throws IOException {
-        if (inputString.contains(field[0])
-                || inputString.contains(field[2])
-                || inputString.contains(field[4])
-                || inputString.contains(field[6])
-                || inputString.contains(field[8])
-                || inputString.contains(field[10])
-                || inputString.contains(field[12])
-                || inputString.contains(field[14])
-                || inputString.contains(field[16])
-                || inputString.contains(field[18])) {
-            outputString = inputString
-                    .replace(field[0], field[1])
-                    .replace(field[2], field[3])
-                    .replace(field[4], field[5])
-                    .replace(field[6], field[7])
-                    .replace(field[8], field[9])
-                    .replace(field[10], field[11])
-                    .replace(field[12], field[13])
-                    .replace(field[14], field[15])
-                    .replace(field[16], field[17])
-                    .replace(field[18], field[19]);
-            fileOutput(outputString);
-        } else {
-            fileOutput(inputString);
+        
+        for (int i = 0; i <= field.length; i+= 2) {
+            if (inputString.contains(field[i])) {
+                 outputString = inputString.replace(field[i], field[i + 1]);
+                 fileOutput(outputString);
+
+            }   
         }
+        fileOutput(inputString);
+        
+        
+//        if (inputString.contains(field[0])
+//                || inputString.contains(field[2])
+//                || inputString.contains(field[4])
+//                || inputString.contains(field[6])
+//                || inputString.contains(field[8])
+//                || inputString.contains(field[10])
+//                || inputString.contains(field[12])
+//                || inputString.contains(field[14])
+//                || inputString.contains(field[16])
+//                || inputString.contains(field[18])) {
+//            outputString = inputString
+//                    .replace(field[0], field[1])
+//                    .replace(field[2], field[3])
+//                    .replace(field[4], field[5])
+//                    .replace(field[6], field[7])
+//                    .replace(field[8], field[9])
+//                    .replace(field[10], field[11])
+//                    .replace(field[12], field[13])
+//                    .replace(field[14], field[15])
+//                    .replace(field[16], field[17])
+//                    .replace(field[18], field[19]);
+//            fileOutput(outputString);
+//        } else {
+//            fileOutput(inputString);
+//        }
     }
 
     /**

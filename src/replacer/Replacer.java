@@ -117,7 +117,7 @@ public class Replacer extends javax.swing.JFrame {
         menuSeparator2 = new javax.swing.JPopupMenu.Separator();
         menuAbout = new javax.swing.JMenuItem();
 
-        loadedFileSelector.setCurrentDirectory(new java.io.File("C:\\Program Files (x86)\\NetBeans 8.1\\<user code>"));
+        loadedFileSelector.setCurrentDirectory(new java.io.File("C:\\Program Files\\NetBeans 8.2\\<user code>"));
         loadedFileSelector.setFileHidingEnabled(true);
         loadedFileSelector.setAlignmentX(1.0F);
         loadedFileSelector.setAlignmentY(1.0F);
@@ -130,7 +130,7 @@ public class Replacer extends javax.swing.JFrame {
         loadedFileSelector.setPreferredSize(new java.awt.Dimension(551, 342));
 
         savedFileSelector.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
-        savedFileSelector.setCurrentDirectory(new java.io.File("C:\\Program Files (x86)\\NetBeans 8.1\\<user code>"));
+        savedFileSelector.setCurrentDirectory(new java.io.File("C:\\Program Files\\NetBeans 8.2\\<user code>"));
         savedFileSelector.setFileHidingEnabled(true);
         savedFileSelector.setAlignmentX(1.0F);
         savedFileSelector.setAlignmentY(1.0F);
